@@ -104,3 +104,119 @@ Bu kütüphaneler, veri işleme, model oluşturma ve değerlendirme süreçlerin
 
 ---
 
+
+
+
+### README (English)
+
+# Supervised Machine Learning on CIFAR-100 Dataset
+
+## Project Overview
+
+This project implements supervised machine learning techniques on the CIFAR-100 dataset using both traditional machine learning classifiers and a Convolutional Neural Network (CNN). Two approaches were tested:
+
+1. **Traditional Machine Learning Models**: Data was scaled using StandardScaler, and three classifiers were trained: RandomForestClassifier, K-Nearest Neighbors (KNN), and DecisionTreeClassifier. Model performance was evaluated using accuracy score, F1 score, precision, and recall metrics.
+2. **Convolutional Neural Network (CNN)**: A CNN architecture was designed and trained for image classification. The network was then used to predict the labels of test images.
+
+## Dataset
+
+- **CIFAR-100**: A dataset consisting of 60,000 32x32 color images from 100 classes, with 600 images per class.
+- Data was split into:
+  - **X_train, y_train**: Training data
+  - **X_test, y_test**: Test data
+
+## Tools and Libraries
+
+- **TensorFlow**
+- **Pandas**
+- **NumPy**
+- **Scikit-learn**
+
+These libraries were used for data manipulation, model training, and evaluation.
+
+## Project Steps
+
+1. **Data Preprocessing**: 
+   - The dataset was loaded and split into training and test sets.
+   - Normalization was applied to both `X_train` and `X_test` by converting the data to `float32` format.
+   - Exploratory Data Analysis (EDA) was performed, where 100 random images from the training set were visualized, and pixel and color structures of the first image were analyzed.
+   - Flattening of the images was done before passing the data to the machine learning models.
+
+2. **Model 1: Traditional Classifiers**:
+   - **Scaling**: Data was scaled using `StandardScaler` to standardize the input.
+   - **Training**: Three models were trained:
+     1. **RandomForestClassifier**
+     2. **K-Nearest Neighbors (KNN)**
+     3. **DecisionTreeClassifier**
+   - **Evaluation**: The models were evaluated using `accuracy_score`, `F1 score`, `precision`, and `recall`.
+
+3. **Model 2: Convolutional Neural Network (CNN)**:
+   - A simple CNN architecture was built and trained on the CIFAR-100 dataset.
+   - The CNN was tested on the test set, where predictions were made on the images in `y_test`.
+
+4. **Visualization and Evaluation**:
+   - Model performance was visualized using accuracy, precision, recall, and F1 scores for each classifier.
+   - For the CNN, the network’s predictions were compared with the true labels, and classification accuracy was reported.
+
+## Future Work
+
+This project demonstrates the use of both traditional machine learning classifiers and CNNs for image classification on the CIFAR-100 dataset. Future improvements could include testing more complex CNN architectures or exploring hyperparameter tuning for traditional classifiers.
+
+---
+
+### README (Türkçe)
+
+# CIFAR-100 Veri Seti Üzerinde Gözetimli Makine Öğrenmesi
+
+## Proje Özeti
+
+Bu projede, CIFAR-100 veri seti üzerinde gözetimli makine öğrenmesi teknikleri uygulanmıştır. Hem geleneksel makine öğrenmesi sınıflandırıcıları hem de bir Evrişimli Sinir Ağı (CNN) kullanılarak iki farklı yöntem test edilmiştir:
+
+1. **Geleneksel Makine Öğrenmesi Modelleri**: Veriler StandardScaler kullanılarak ölçeklendirilmiş ve üç sınıflandırıcı eğitilmiştir: RandomForestClassifier, K-Nearest Neighbors (KNN), ve DecisionTreeClassifier. Modeller, accuracy score, F1 score, precision ve recall metrikleri ile değerlendirilmiştir.
+2. **Evrişimli Sinir Ağı (CNN)**: Görüntü sınıflandırması için bir CNN mimarisi oluşturulmuş ve eğitilmiştir. Sinir ağı, test verisindeki görüntüler üzerinde tahmin yapmak için kullanılmıştır.
+
+## Veri Seti
+
+- **CIFAR-100**: 100 sınıf içeren, her bir sınıfta 600 adet bulunan 32x32 boyutlarında 60,000 renkli görüntü içerir.
+- Veri eğitim ve test kümesi olarak ayrılmıştır:
+  - **X_train, y_train**: Eğitim verisi
+  - **X_test, y_test**: Test verisi
+
+## Araçlar ve Kütüphaneler
+
+- **TensorFlow**
+- **Pandas**
+- **NumPy**
+- **Scikit-learn**
+
+Bu kütüphaneler, veri işleme, model eğitimi ve değerlendirme süreçlerinde kullanılmıştır.
+
+## Proje Adımları
+
+1. **Veri Ön İşleme**:
+   - Veri seti yüklendi ve eğitim ile test kümelerine ayrıldı.
+   - Hem `X_train` hem de `X_test` verileri `float32` formatına dönüştürülerek normalize edildi.
+   - Keşifsel Veri Analizi (EDA) yapıldı; eğitim kümesinden rastgele seçilen 100 adet görüntü görselleştirildi ve ilk görüntünün piksel ve renk yapıları analiz edildi.
+   - Görseller makine öğrenmesi modellerine iletilmeden önce düzleştirildi (flattening).
+
+2. **Model 1: Geleneksel Sınıflandırıcılar**:
+   - **Ölçeklendirme**: `StandardScaler` kullanılarak veri standartlaştırıldı.
+   - **Eğitim**: Üç model eğitildi:
+     1. **RandomForestClassifier**
+     2. **K-Nearest Neighbors (KNN)**
+     3. **DecisionTreeClassifier**
+   - **Değerlendirme**: Modeller accuracy score, F1 score, precision ve recall metrikleri ile değerlendirildi.
+
+3. **Model 2: Evrişimli Sinir Ağı (CNN)**:
+   - CIFAR-100 veri seti üzerinde basit bir CNN mimarisi oluşturuldu ve eğitildi.
+   - CNN, test kümesindeki görüntüler üzerinde tahminlerde bulunarak sonuçlar rapor edildi.
+
+4. **Görselleştirme ve Değerlendirme**:
+   - Her sınıflandırıcı için accuracy, precision, recall ve F1 score metrikleri görselleştirildi.
+   - CNN tahminleri gerçek etiketlerle karşılaştırıldı ve sınıflandırma doğruluğu raporlandı.
+
+
+
+**Kaggle Notebook Links:**
+1. https://www.kaggle.com/code/codingwithmk/gaih-ml-supervised-project-cifar100-14-09-2024/edit
+2. https://www.kaggle.com/code/codingwithmk/gaih-ml-unsupervised-project-cifar100-15-09-2024/edit
